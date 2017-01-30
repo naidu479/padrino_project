@@ -1,0 +1,9 @@
+%h2 Create Post
+= form_for @post, url_for(:posts, :create), {method: :post} do |f|
+  %p
+    = f.label :title, :caption => "Title"
+    = f.text_field :title
+  %p
+    = f.label :title, :caption => "Body"
+    = f.text_area :body
+  = f.submit
